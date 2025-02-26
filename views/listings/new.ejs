@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate") %>
+<div class="col-8 offset-2">
+  <h3 class="mt-3">Register your villa</h3>
+  <form
+    method="POST"
+    action="/listings"
+    class="row needs-validation"
+    novalidate
+    enctype="multipart/form-data"
+  >
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        name="listing[title]"
+        placeholder="title"
+        type="text"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please provide title!</div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        name="listing[description]"
+        placeholder="description"
+        class="form-control"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please provide description!</div>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload image</label>
+      <input
+        name="listing[image]"
+        class="form-control"
+        type="file"
+        required
+      />
+      <div class="invalid-feedback">Please provide image url!</div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input
+        name="listing[price]"
+        placeholder="price"
+        class="form-control"
+        type="text"
+        required
+      />
+      <div class="invalid-feedback">Please provide price!</div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label for="location" class="form-label">Location</label>
+        <input
+          name="listing[location]"
+          placeholder="location"
+          id="city"
+          class="form-control"
+          type="text"
+          required
+        />
+        <div class="invalid-feedback">Please provide location!</div>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="description" class="form-label">Country</label>
+        <input
+          name="listing[country]"
+          placeholder="country"
+          class="form-control"
+          type="text"
+          required
+        />
+        <div class="invalid-feedback">Please provide country!</div>
+      </div>
+    </div>
+    <button class="btn btn-dark register mb-4" id="button">Register</button>
+  </form>
+</div>
